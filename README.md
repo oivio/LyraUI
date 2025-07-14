@@ -67,67 +67,74 @@ Instruction from project settings:
  
 Instruction from ini files:
 
-	Open DefaultEngine.ini and edit or add:
-	[/Script/EngineSettings.GameMapsSettings]
-	GameInstanceClass=/Script/LyraUINavigation.LyraUINavGameInstance
-
-	[/Script/Engine.Engine]
-	LocalPlayerClassName=/Script/LyraUI.LyraLocalPlayer
-	GameViewportClientClassName=/Script/LyraUI.LyraGameViewportClient
-	GameUserSettingsClassName=/Script/LyraUI.LyraSettingsLocal
+Open DefaultEngine.ini and edit or add:
 	
-	Open DefaultEditor.ini and edit or add:
-	[/Script/CommonUI.CommonUIEditorSettings]
-	TemplateTextStyle=/LyraUI/UI/Foundation/Text/TextStyle-Regular.TextStyle-Regular_C
-	TemplateButtonStyle=/LyraUI/UI/Foundation/Buttons/ButtonStyle-Primary-M.ButtonStyle-Primary-M_C
+[/Script/EngineSettings.GameMapsSettings]
+GameInstanceClass=/Script/LyraUINavigation.LyraUINavGameInstance
 
-	Open DefaultGame.ini and edit or add:
-	[/Script/LyraUI.LyraAudioSettings]
-	DefaultControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_BaseMix.CBM_BaseMix
-	LoadingScreenControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_LoadingScreenMix.CBM_LoadingScreenMix
-	UserSettingsControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_UserMix.CBM_UserMix
-	OverallVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_Main.CB_Main
-	MusicVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_Music.CB_Music
-	SoundFXVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_SFX.CB_SFX
-	DialogueVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_Dialogue.CB_Dialogue
-	VoiceChatVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_VoiceChat.CB_VoiceChat
-	+HDRAudioSubmixEffectChain=(Submix="/LyraUI/Audio/Submixes/MusicSubmix.MusicSubmix",SubmixEffectChain=("/LyraUI/Audio/Effects/SubmixEffects/DYN_MainDynamics.DYN_MainDynamics"))
-	+LDRAudioSubmixEffectChain=(Submix="/LyraUI/Audio/Submixes/MainSubmix.MainSubmix",SubmixEffectChain=("/LyraUI/Audio/DYN_LowMultibandDynamics.DYN_LowMultibandDynamics","/LyraUI/Audio/Effects/SubmixEffects/DYN_LowDynamics.DYN_LowDynamics"))
+[/Script/Engine.Engine]
+LocalPlayerClassName=/Script/LyraUI.LyraLocalPlayer
+GameViewportClientClassName=/Script/LyraUI.LyraGameViewportClient
+GameUserSettingsClassName=/Script/LyraUI.LyraSettingsLocal
+	
+	
+Open DefaultEditor.ini and edit or add:
+	
+[/Script/CommonUI.CommonUIEditorSettings]
+TemplateTextStyle=/LyraUI/UI/Foundation/Text/TextStyle-Regular.TextStyle-Regular_C
+TemplateButtonStyle=/LyraUI/UI/Foundation/Buttons/ButtonStyle-Primary-M.ButtonStyle-Primary-M_C
 
-	[/Script/CommonUI.CommonUISettings]
-	CommonButtonAcceptKeyHandling=Ignore
-	DefaultRichTextDataClass=/LyraUI/UI/Foundation/RichTextData/CommonUIRichTextData.CommonUIRichTextData_C
-	DefaultThrobberMaterial=/LyraUI/UI/Foundation/Materials/M_UI_Throbber_Base.M_UI_Throbber_Base
 
-	[/Script/CommonInput.CommonInputSettings]
-	InputData=/LyraUI/UI/B_CommonInputData.B_CommonInputData_C
+Open DefaultGame.ini and edit or add:
+	
+[/Script/LyraUI.LyraAudioSettings]
+DefaultControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_BaseMix.CBM_BaseMix
+LoadingScreenControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_LoadingScreenMix.CBM_LoadingScreenMix
+UserSettingsControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_UserMix.CBM_UserMix
+OverallVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_Main.CB_Main
+MusicVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_Music.CB_Music
+SoundFXVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_SFX.CB_SFX
+DialogueVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_Dialogue.CB_Dialogue
+VoiceChatVolumeControlBus=/LyraUI/Audio/Modulation/ControlBuses/CB_VoiceChat.CB_VoiceChat
++HDRAudioSubmixEffectChain=(Submix="/LyraUI/Audio/Submixes/MusicSubmix.MusicSubmix",SubmixEffectChain=("/LyraUI/Audio/Effects/SubmixEffects/DYN_MainDynamics.DYN_MainDynamics"))
++LDRAudioSubmixEffectChain=(Submix="/LyraUI/Audio/Submixes/MainSubmix.MainSubmix",SubmixEffectChain=("/LyraUI/Audio/DYN_LowMultibandDynamics.DYN_LowMultibandDynamics","/LyraUI/Audio/Effects/SubmixEffects/DYN_LowDynamics.DYN_LowDynamics"))
 
-	[/Script/CommonLoadingScreen.CommonLoadingScreenSettings]
-	LoadingScreenWidget=/LyraUI/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host_C
+[/Script/CommonUI.CommonUISettings]
+CommonButtonAcceptKeyHandling=Ignore
+DefaultRichTextDataClass=/LyraUI/UI/Foundation/RichTextData/CommonUIRichTextData.CommonUIRichTextData_C
+DefaultThrobberMaterial=/LyraUI/UI/Foundation/Materials/M_UI_Throbber_Base.M_UI_Throbber_Base
 
-	[/Script/LyraUI.LyraUIMessaging]
-	ConfirmationDialogClass=/LyraUI/UI/Foundation/Dialogs/W_ConfirmationDialog.W_ConfirmationDialog_C
-	ErrorDialogClass=/LyraUI/UI/Foundation/Dialogs/W_ConfirmationError.W_ConfirmationError_C
+[/Script/CommonInput.CommonInputSettings]
+InputData=/LyraUI/UI/B_CommonInputData.B_CommonInputData_C
 
-	[/Script/LyraUI.LyraUIManagerSubsystem]
-	DefaultUIPolicyClass=/LyraUI/UI/B_LyraUIPolicy.B_LyraUIPolicy_C
+[/Script/CommonLoadingScreen.CommonLoadingScreenSettings]
+LoadingScreenWidget=/LyraUI/UI/Foundation/LoadingScreen/W_LoadingScreen_Host.W_LoadingScreen_Host_C
 
-	Open DefaultInput.ini and edit or add:
-	[/Script/Engine.InputSettings]
-	DefaultPlayerInputClass=/Script/LyraUI.LyraPlayerInput
-	DefaultInputComponentClass=/Script/LyraUI.LyraInputComponent
+[/Script/LyraUI.LyraUIMessaging]
+ConfirmationDialogClass=/LyraUI/UI/Foundation/Dialogs/W_ConfirmationDialog.W_ConfirmationDialog_C
+ErrorDialogClass=/LyraUI/UI/Foundation/Dialogs/W_ConfirmationError.W_ConfirmationError_C
 
-	[/Script/CommonUI.CommonUIInputSettings]
-	+InputActions=(ActionTag=UI.Action.Escape,DefaultDisplayName=NSLOCTEXT("[/Script/CommonUI]", "DDDC55F044A6D009AE3FC89634A4FBE3", "Back"),KeyMappings=((Key=Escape),(Key=Gamepad_Special_Right)))
-	AnalogCursorSettings=(PreprocessorPriority=2,PreprocessorRegistrationInfo=(Type=Game,Priority=2),bEnableCursorAcceleration=True,CursorAcceleration=1500.000000,CursorMaxSpeed=2200.000000,CursorDeadZone=0.250000,HoverSlowdownFactor=0.400000,ScrollDeadZone=0.200000,ScrollUpdatePeriod=0.100000,ScrollMultiplier=2.500000)
+[/Script/LyraUI.LyraUIManagerSubsystem]
+DefaultUIPolicyClass=/LyraUI/UI/B_LyraUIPolicy.B_LyraUIPolicy_C
 
-	[/Script/EnhancedInput.EnhancedInputDeveloperSettings]
-	bEnableUserSettings=True
-	UserSettingsClass=/Script/LyraUI.LyraInputUserSettings
-	DefaultPlayerMappableKeyProfileClass=/Script/LyraUI.LyraPlayerMappableKeyProfile
 
-	[/Script/InputEditor.EnhancedInputEditorProjectSettings]
-	DefaultEditorInputClass=/Script/LyraUI.LyraPlayerInput
+Open DefaultInput.ini and edit or add:
+	
+[/Script/Engine.InputSettings]
+DefaultPlayerInputClass=/Script/LyraUI.LyraPlayerInput
+DefaultInputComponentClass=/Script/LyraUI.LyraInputComponent
+
+[/Script/CommonUI.CommonUIInputSettings]
++InputActions=(ActionTag=UI.Action.Escape,DefaultDisplayName=NSLOCTEXT("[/Script/CommonUI]", "DDDC55F044A6D009AE3FC89634A4FBE3", "Back"),KeyMappings=((Key=Escape),(Key=Gamepad_Special_Right)))
+AnalogCursorSettings=(PreprocessorPriority=2,PreprocessorRegistrationInfo=(Type=Game,Priority=2),bEnableCursorAcceleration=True,CursorAcceleration=1500.000000,CursorMaxSpeed=2200.000000,CursorDeadZone=0.250000,HoverSlowdownFactor=0.400000,ScrollDeadZone=0.200000,ScrollUpdatePeriod=0.100000,ScrollMultiplier=2.500000)
+
+[/Script/EnhancedInput.EnhancedInputDeveloperSettings]
+bEnableUserSettings=True
+UserSettingsClass=/Script/LyraUI.LyraInputUserSettings
+DefaultPlayerMappableKeyProfileClass=/Script/LyraUI.LyraPlayerMappableKeyProfile
+
+[/Script/InputEditor.EnhancedInputEditorProjectSettings]
+DefaultEditorInputClass=/Script/LyraUI.LyraPlayerInput
 
 
 This is just work in progess instructions.
