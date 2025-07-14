@@ -5,7 +5,7 @@ The goal was to make reusable with almost any project besides Lyra and also easl
 Lyra UI is advance system that do requie some C++ and also blueprint skills.  
 
 
-Installation Instruction:
+> Installation Instruction:
 
 1. It is needed to copy Plugins can be just copied from original Lyra Sample or from my small demo https://github.com/oivio/LyraUI-Demo :
 - AsyncMixin
@@ -68,7 +68,7 @@ Instruction from project settings:
 Instruction from ini files:
 
 Open DefaultEngine.ini and edit or add:
-	
+```
 [/Script/EngineSettings.GameMapsSettings]
 GameInstanceClass=/Script/LyraUINavigation.LyraUINavGameInstance
 
@@ -76,17 +76,17 @@ GameInstanceClass=/Script/LyraUINavigation.LyraUINavGameInstance
 LocalPlayerClassName=/Script/LyraUI.LyraLocalPlayer
 GameViewportClientClassName=/Script/LyraUI.LyraGameViewportClient
 GameUserSettingsClassName=/Script/LyraUI.LyraSettingsLocal
-	
+```	
 	
 Open DefaultEditor.ini and edit or add:
-	
+```	
 [/Script/CommonUI.CommonUIEditorSettings]
 TemplateTextStyle=/LyraUI/UI/Foundation/Text/TextStyle-Regular.TextStyle-Regular_C
 TemplateButtonStyle=/LyraUI/UI/Foundation/Buttons/ButtonStyle-Primary-M.ButtonStyle-Primary-M_C
-
+```
 
 Open DefaultGame.ini and edit or add:
-	
+```	
 [/Script/LyraUI.LyraAudioSettings]
 DefaultControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_BaseMix.CBM_BaseMix
 LoadingScreenControlBusMix=/LyraUI/Audio/Modulation/ControlBusMixes/CBM_LoadingScreenMix.CBM_LoadingScreenMix
@@ -116,10 +116,10 @@ ErrorDialogClass=/LyraUI/UI/Foundation/Dialogs/W_ConfirmationError.W_Confirmatio
 
 [/Script/LyraUI.LyraUIManagerSubsystem]
 DefaultUIPolicyClass=/LyraUI/UI/B_LyraUIPolicy.B_LyraUIPolicy_C
-
+```
 
 Open DefaultInput.ini and edit or add:
-	
+```	
 [/Script/Engine.InputSettings]
 DefaultPlayerInputClass=/Script/LyraUI.LyraPlayerInput
 DefaultInputComponentClass=/Script/LyraUI.LyraInputComponent
@@ -135,6 +135,6 @@ DefaultPlayerMappableKeyProfileClass=/Script/LyraUI.LyraPlayerMappableKeyProfile
 
 [/Script/InputEditor.EnhancedInputEditorProjectSettings]
 DefaultEditorInputClass=/Script/LyraUI.LyraPlayerInput
-
+```
 
 This is just work in progess instructions.
