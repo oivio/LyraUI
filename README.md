@@ -132,9 +132,6 @@ AnalogCursorSettings=(PreprocessorPriority=2,PreprocessorRegistrationInfo=(Type=
 bEnableUserSettings=True
 UserSettingsClass=/Script/LyraUI.LyraInputUserSettings
 DefaultPlayerMappableKeyProfileClass=/Script/LyraUI.LyraPlayerMappableKeyProfile
-
-[/Script/InputEditor.EnhancedInputEditorProjectSettings]
-DefaultEditorInputClass=/Script/LyraUI.LyraPlayerInput
 ```
 
 This is just work in progess instructions.
