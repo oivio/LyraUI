@@ -22,6 +22,7 @@ public class LyraUI : ModuleRules
             "ControlFlows",
             "PropertyPath",
             "ModularGameplay",
+            "ModularGameplayActors",
             "UIExtension",
         });
 
