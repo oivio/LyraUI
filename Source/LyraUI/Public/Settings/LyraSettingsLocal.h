@@ -5,6 +5,9 @@
 #include "GameFramework/GameUserSettings.h"
 #include "InputCoreTypes.h"
 
+//#include "DLSSLibrary.h"
+//#include "NISLibrary.h"
+
 #include "LyraSettingsLocal.generated.h"
 
 enum class ECommonInputType : uint8;
@@ -455,4 +458,43 @@ private:
 
 private:
 	FDelegateHandle OnApplicationActivationStateChangedHandle;
+
+	/*
+
+	//////////////////////////////////////////////////////////////////
+	// DLSS WIP
+public:
+
+	UFUNCTION()
+	UDLSSMode GetDLSSMode() const;
+
+	UFUNCTION()
+	void SetDLSSMode(UDLSSMode InMode);
+
+	UFUNCTION()
+	float GetNISSharpness() const;
+
+	UFUNCTION()
+	void SetNISSharpness(float Sharpness);
+
+	UFUNCTION()
+	bool GetRTXEnabled() const;
+
+	UFUNCTION()
+	void SetRTXEnabled(bool bEnabled);
+
+private:
+
+	UPROPERTY(Config)
+	UDLSSMode DLSSMode = UDLSSMode::Off;
+
+	UDLSSMode DesiredDLSSMode = UDLSSMode::Off;
+
+	UPROPERTY()
+	float NISSharpness = 0.0f;
+
+	UPROPERTY()
+	bool bRTXEnabled = false;
+	*/
+
 };

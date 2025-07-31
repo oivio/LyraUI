@@ -24,6 +24,8 @@ public class LyraUI : ModuleRules
             "ModularGameplay",
             "ModularGameplayActors",
             "UIExtension",
+            //"DLSSBlueprint",
+            //"NISBlueprint",
         });
 
         PrivateDependencyModuleNames.AddRange(new string[]

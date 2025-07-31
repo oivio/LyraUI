@@ -26,6 +26,7 @@
 #include "Audio/LyraAudioMixEffectsSubsystem.h"
 #include "Performance/LatencyMarkerModule.h"
 #include "Development/LyraPlatformEmulationSettings.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 #include UE_INLINE_GENERATED_CPP_BY_NAME(LyraSettingsLocal)
 
@@ -1685,3 +1686,54 @@ void ULyraSettingsLocal::UpdateDynamicResFrameTime(float TargetFPS)
 		}
 	}
 }
+
+/*
+UDLSSMode ULyraSettingsLocal::GetDLSSMode() const
+{
+	return DLSSMode;
+}
+
+void ULyraSettingsLocal::SetDLSSMode(UDLSSMode InMode)
+{
+
+	if (DLSSMode != InMode)
+	{
+		DLSSMode = InMode;
+		UDLSSLibrary::SetDLSSMode(GetWorld(), DLSSMode);
+	}
+
+}
+
+float ULyraSettingsLocal::GetNISSharpness() const
+{
+	return NISSharpness;
+}
+
+void ULyraSettingsLocal::SetNISSharpness(float Sharpness)
+{
+	if (NISSharpness != Sharpness)
+	{
+		NISSharpness = Sharpness;
+		SetNISSharpness(NISSharpness);
+	}
+}
+
+bool ULyraSettingsLocal::GetRTXEnabled() const
+{
+	return bRTXEnabled;
+}
+
+void ULyraSettingsLocal::SetRTXEnabled(bool bEnabled)
+{
+	bRTXEnabled = bEnabled;
+	if (bEnabled)
+	{
+		UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("r.RayTracing.ForceAllRayTracingEffects -1"));
+		UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("r.Lumen.HardwareRayTracing 1"));
+	}else {
+		UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("r.RayTracing.ForceAllRayTracingEffects 0"));
+		UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("r.Lumen.HardwareRayTracing 0"));
+	}
+}
+
+*/

@@ -377,4 +377,5 @@ private:
 	}
 
 	bool bIsDirty = false;
+
 };

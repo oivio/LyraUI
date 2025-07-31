@@ -12,6 +12,22 @@
 #define UE_API LYRAUI_API
 
 class UObject;
+class UCommonActivatableWidget;
+
+USTRUCT(BlueprintType)
+struct FContentToLayerWidgetEntry
+{
+	GENERATED_BODY()
+
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
+	FGameplayTag LayerID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
+	TSubclassOf<UCommonActivatableWidget> WidgetClass;
+
+};
 
 USTRUCT(BlueprintType)
 struct FRegisterExtensionAsWidgetEntry
@@ -21,7 +37,7 @@ struct FRegisterExtensionAsWidgetEntry
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
-	FGameplayTag ExtensionPointTag;
+	FGameplayTag SlotID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
 	TSubclassOf<UUserWidget> WidgetClass;
@@ -39,7 +55,7 @@ struct FRegisterExtensionAsWidgetForContextEntry
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
-	FGameplayTag ExtensionPointTag;
+	FGameplayTag SlotID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
 	UObject* ContextObject = nullptr;
@@ -60,7 +76,7 @@ struct FRegisterExtensionPointEntry
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
-	FGameplayTag ExtensionPointTag;
+	FGameplayTag SlotID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
 	EUIExtensionPointMatch ExtensionPointTagMatchType = EUIExtensionPointMatch::ExactMatch;;
@@ -80,7 +96,7 @@ struct FRegisterExtensionPointContextEntry
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
-	FGameplayTag ExtensionPointTag;
+	FGameplayTag SlotID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
 	UObject* ContextObject = nullptr;
@@ -103,7 +119,7 @@ struct FRegisterExtensionAsDataEntry
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
-	FGameplayTag ExtensionPointTag;
+	FGameplayTag SlotID;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Extensions)
 	UObject* ContextObject = nullptr;

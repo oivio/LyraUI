@@ -102,6 +102,77 @@ UGameSettingCollection* ULyraGameSettingRegistry::InitializeVideoSettings(ULyraL
 	UGameSettingValueDiscreteDynamic_Enum* WindowModeSetting = nullptr;
 	UGameSetting* MobileFPSType = nullptr;
 
+	// NVIDIA Quality
+	////////////////////////////////////////////////////////////////////////////////////
+	/*
+	{
+		if (UDLSSLibrary::IsDLSSSupported())
+		{
+			UGameSettingCollection* NVidiaSettings = NewObject<UGameSettingCollection>();
+			NVidiaSettings->SetDevName(TEXT("NVIDIACollection"));
+			NVidiaSettings->SetDisplayName(LOCTEXT("NVIDIACollection_Name", "NVIDIA Settings"));
+			Screen->AddSetting(NVidiaSettings);
+
+			//----------------------------------------------------------------------------------
+			{
+				UGameSettingValueDiscreteDynamic_Enum* Setting = NewObject<UGameSettingValueDiscreteDynamic_Enum>();
+				Setting->SetDevName(TEXT("DLSS"));
+				Setting->SetDisplayName(LOCTEXT("DLSS_Name", "NVIDIA DLSS"));
+				Setting->SetDescriptionRichText(LOCTEXT("DLSS_Description", "Deep Learning Super Sampling (DLSS) is a new image rendering technology developed by NVIDIA, which uses deep learning to produce an image that looks like a higher-resolution version of an original lower resolution image."));
+
+				Setting->SetDynamicGetter(GET_LOCAL_SETTINGS_FUNCTION_PATH(GetDLSSMode));
+				Setting->SetDynamicSetter(GET_LOCAL_SETTINGS_FUNCTION_PATH(SetDLSSMode));
+				Setting->SetDefaultValue(GetDefault<ULyraSettingsLocal>()->GetDLSSMode());
+
+				for (const UDLSSMode& Mode : UDLSSLibrary::GetSupportedDLSSModes())
+				{
+					FString DisplayName = UEnum::GetDisplayValueAsText(Mode).ToString();
+					FString DisplayNameNoSpaces = DisplayName.Replace(TEXT(" "), TEXT(""));
+					FText OptionText = FText::Format(LOCTEXT("DLSS{0}", "{1}"), FText::FromString(DisplayNameNoSpaces), FText::FromString(DisplayName));
+					Setting->AddEnumOption(Mode, OptionText);
+				}
+
+				NVidiaSettings->AddSetting(Setting);
+			}
+
+			//----------------------------------------------------------------------------------
+			{
+				UGameSettingValueScalarDynamic* Setting = NewObject<UGameSettingValueScalarDynamic>();
+				Setting->SetDevName(TEXT("Sharpness"));
+				Setting->SetDisplayName(LOCTEXT("Sharpness_Name", "Sharpness"));
+				Setting->SetDescriptionRichText(LOCTEXT("Sharpness_Description", "Enhances the clarity and sharpness of images and games displayed on your screen."));
+
+				Setting->SetDynamicGetter(GET_LOCAL_SETTINGS_FUNCTION_PATH(GetNISSharpness));
+				Setting->SetDynamicSetter(GET_LOCAL_SETTINGS_FUNCTION_PATH(SetNISSharpness));
+				Setting->SetDefaultValue(GetDefault<ULyraSettingsLocal>()->GetNISSharpness());
+
+				Setting->SetDisplayFormat(UGameSettingValueScalarDynamic::RawTwoDecimals);
+				Setting->SetSourceRangeAndStep(TRange<double>(0, 1), 0.01);
+
+				NVidiaSettings->AddSetting(Setting);
+			}
+
+			//----------------------------------------------------------------------------------
+			{
+				if (IsRayTracingAllowed()) 
+				{
+
+					UGameSettingValueDiscreteDynamic_Bool* Setting = NewObject<UGameSettingValueDiscreteDynamic_Bool>();
+					Setting->SetDevName(TEXT("RTX"));
+					Setting->SetDisplayName(LOCTEXT("RTX_Name", "RTX"));
+					Setting->SetDescriptionRichText(LOCTEXT("RTX_Description", "Ray tracing is a rendering technique that simulates the behavior of light to create more realistic and immersive visuals in games and other applications"));
+
+					Setting->SetDynamicGetter(GET_LOCAL_SETTINGS_FUNCTION_PATH(GetRTXEnabled));
+					Setting->SetDynamicSetter(GET_LOCAL_SETTINGS_FUNCTION_PATH(SetRTXEnabled));
+					Setting->SetDefaultValue(false);
+
+					NVidiaSettings->AddSetting(Setting);
+				}
+			}
+		}
+	}
+	*/
+
 	// Display
 	////////////////////////////////////////////////////////////////////////////////////
 	{
@@ -607,7 +678,9 @@ UGameSettingCollection* ULyraGameSettingRegistry::InitializeVideoSettings(ULyraL
 
 			AdvancedGraphics->AddSetting(Setting);
 		}
+
 	}
+
 
 	return Screen;
 }
