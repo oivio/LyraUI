@@ -8,6 +8,7 @@ Lyra UI is advance system that do requie some C++ and also blueprint skills.
 > Installation Instruction:
 
 1. It is needed to copy Plugins can be just copied from original Lyra Sample or from my small demo https://github.com/oivio/LyraUI-Demo :
+```	
 - AsyncMixin
 - CommonGame
 - CommonLoadingScreen
@@ -17,6 +18,7 @@ Lyra UI is advance system that do requie some C++ and also blueprint skills.
 - GameSubtitles
 - ModularGameplayActors
 - UIExtension
+```	
 
 2. Into project Config folder vopy folders from LyraUI/Config including files like DefaultScalability.ini and DefaultDeviceProfiles.ini the rest is optional 
 
@@ -24,6 +26,7 @@ Lyra UI is advance system that do requie some C++ and also blueprint skills.
 
 Instruction from project settings:
 
+```	
   - [Project / Maps & Modes] -> Game Instance Class = LyraGameInstance
   
   - [Game / Common Input Settings] -> Input Data = B_CommonInputData
@@ -64,6 +67,7 @@ Instruction from project settings:
   
   - [Plugins / Common UI Framework] -> Default Throbber Material = M_UI_Throbber_Base
   - [Plugins / Common UI Framework] -> Default Rich Text Data Class = CommonUIRichTextData
+```	
  
 Instruction from ini files:
 
