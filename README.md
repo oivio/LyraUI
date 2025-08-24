@@ -5,9 +5,9 @@ The goal was to make reusable with almost any project besides Lyra and also easl
 Lyra UI is advance system that do requie some C++ and also blueprint skills.  
 
 
-> Installation Instruction:
+## ✨ Installation Introduction 
 
-1. It is needed to copy Plugins can be just copied from original Lyra Sample or from my small demo https://github.com/oivio/LyraUI-Demo :
+1. It is needed to copy bellow Plugins from Lyra Sample Project or from my small demo https://github.com/oivio/LyraUI-Demo :
 ```	
 - AsyncMixin
 - CommonGame
@@ -20,11 +20,11 @@ Lyra UI is advance system that do requie some C++ and also blueprint skills.
 - UIExtension
 ```	
 
-2. Into project Config folder vopy folders from LyraUI/Config including files like DefaultScalability.ini and DefaultDeviceProfiles.ini the rest is optional 
+2. Into your project Config folder copy folders from LyraUI/Config including files like DefaultScalability.ini and DefaultDeviceProfiles.ini the rest is optional 
 
 3. It is requied to update ini files manuly or from Project Settings
 
-Instruction from project settings:
+Project settings to change or update :
 
 ```	
   - [Project / Maps & Modes] -> Game Instance Class = LyraGameInstance
@@ -69,7 +69,7 @@ Instruction from project settings:
   - [Plugins / Common UI Framework] -> Default Rich Text Data Class = CommonUIRichTextData
 ```	
  
-Instruction from ini files:
+Updating ini files:
 
 Open DefaultEngine.ini and edit or add:
 ```
@@ -138,4 +138,10 @@ UserSettingsClass=/Script/LyraUI.LyraInputUserSettings
 DefaultPlayerMappableKeyProfileClass=/Script/LyraUI.LyraPlayerMappableKeyProfile
 ```
 
-This is just work in progess instructions.
+## 🔒 License
+* Licensed for Use Only with Unreal Engine-based Products
+* The majority of this project is released under the MIT license as found in the [LICENSE](https://github.com/oivio/LyraUI/blob/main/LICENSE) file.
+
+## ⭐ Acknowledgements
+- 🎬 [NanceDevDiaries](https://www.youtube.com/@nancedevdiaries) 
+- 🧠 [Xist](https://x157.github.io) 
