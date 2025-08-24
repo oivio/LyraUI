@@ -1,8 +1,7 @@
 # LyraUI-Plugin
 
-LyraUI-Plugin is a converstion of advanced Lyra UI Main Menu in to seperate Plugin. 
-The goal was to make reusable with almost any project besides Lyra and also easly updatable from future Lyra Sample versions.
-Lyra UI is advance system that do requie some C++ and also blueprint skills.  
+Lyra UI Plugin is a conversion of advanced Lyra Interface in to separate Plugin. The goal was to make reusable with almost any project besides Lyra and also easy to update from future Lyra Sample versions. 
+Lyra UI is advance system that do require some C++ and also blueprint skills. 
 
 
 ## ✨ Installation Introduction 
