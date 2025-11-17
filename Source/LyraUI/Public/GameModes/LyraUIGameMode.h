@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "GameplayTagContainer.h"
+#include "Data/LyraUIExData.h"
 
 #include "LyraUIGameMode.generated.h"
 

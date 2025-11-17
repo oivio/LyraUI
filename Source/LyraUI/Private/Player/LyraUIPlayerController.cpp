@@ -13,6 +13,7 @@
 #include "CommonInputSubsystem.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
+#include "UserSettings/EnhancedInputUserSettings.h"
 #include "InputMappingContext.h"
 #include "Engine/LocalPlayer.h"
 
