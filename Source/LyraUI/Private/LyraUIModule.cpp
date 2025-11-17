@@ -10,7 +10,7 @@
 
 void FLyraUIModule::StartupModule()
 {
-	UGameplayTagsManager::Get().AddTagIniSearchPath(FPaths::ProjectPluginsDir() / TEXT("GASPi/Config/Tags"));
+	UGameplayTagsManager::Get().AddTagIniSearchPath(FPaths::ProjectPluginsDir() / TEXT("LyraUI/Config/Tags"));
 }
 
 void FLyraUIModule::ShutdownModule()
