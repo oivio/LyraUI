@@ -1,12 +1,12 @@
 # LyraUI-Plugin
 
-Lyra UI Plugin is a conversion of advanced Lyra Interface in to separate Plugin. The goal was to make reusable with almost any project besides Lyra and also easy to update from future Lyra Sample versions. 
-Lyra UI is advance system that do require some C++ and also blueprint skills. 
+Lyra UI Plugin is a conversion of advanced Lyra Interface into a separate Plugin. The goal was to make it reusable with almost any project besides Lyra, while also making it easy to update from future Lyra Sample versions. 
+Lyra UI is an advance system that requires some C++ and blueprint skills. 
 
 
 ## ✨ Installation Introduction 
 
-1. It is needed to copy bellow Plugins from Lyra Sample Project or from my small demo https://github.com/oivio/LyraUI-Demo :
+1. Copy the following plugins from the Lyra Sample Project or from my small demo: https://github.com/oivio/LyraUI-Demo :
 ```	
 - AsyncMixin
 - CommonGame
@@ -21,7 +21,7 @@ Lyra UI is advance system that do require some C++ and also blueprint skills.
 
 2. Into your project Config folder copy folders from LyraUI/Config including files like DefaultScalability.ini and DefaultDeviceProfiles.ini the rest is optional 
 
-3. It is requied to update ini files manuly or from Project Settings
+3. It is required to update INI files manually or from Project Settings.
 
 Project settings to change or update :
 
@@ -68,7 +68,7 @@ Project settings to change or update :
   - [Plugins / Common UI Framework] -> Default Rich Text Data Class = CommonUIRichTextData
 ```	
  
-Updating ini files:
+Updating INI files:
 
 Open DefaultEngine.ini and edit or add:
 ```
