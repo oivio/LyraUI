@@ -1,7 +1,7 @@
 # LyraUI-Plugin
 
 Lyra UI Plugin is a conversion of advanced Lyra Interface into a separate Plugin. The goal was to make it reusable with almost any project besides Lyra, while also making it easy to update from future Lyra Sample versions. 
-Lyra UI is an advance system that requires some C++ and blueprint skills. 
+Lyra UI is an advance system that requires some C++ and Blueprint skills. 
 
 
 ## ✨ Installation Introduction 
@@ -19,8 +19,10 @@ Lyra UI is an advance system that requires some C++ and blueprint skills.
 - UIExtension
 ```	
 
-2. Into your project Config folder copy folders from LyraUI/Config including files like DefaultScalability.ini and DefaultDeviceProfiles.ini the rest is optional 
-
+2. Inside the **LyraUI/Config/ExtrasToCopy** folder, you will find configuration files that must be placed inside your project's **Config** folder.
+```	
+If files with the same names already exist in your project, do not overwrite them. Instead, copy only the required configuration entries from these files and paste them into your existing configuration files.
+```	
 3. It is required to update INI files manually or from Project Settings.
 
 Project settings to change or update :
